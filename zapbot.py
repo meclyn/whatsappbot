@@ -13,15 +13,15 @@ class WhatsappBot:
         options = webdriver.ChromeOptions()
         options.add_argument('lang=pt-br')
 
-        # Use o ChromeDriverManager para instalar e configurar o ChromeDriver
+        r
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         self.driver.get('https://web.whatsapp.com')
-        input("Pressione Enter após fazer o login no WhatsApp Web...")  # Aguarde o login manualmente
+        input("Pressione Enter após fazer o login no WhatsApp Web...")  
 
     def EnviarMensagens(self):
         for grupo in self.grupos:
             try:
-                # Aguarde até que o elemento com o título do grupo esteja presente
+                
                 WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.XPATH, f"//span[@title='{grupo}']")))
                 grupo = self.driver.find_element(By.XPATH, f"//span[@title='{grupo}']")
                 grupo.click()
