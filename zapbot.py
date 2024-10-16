@@ -8,7 +8,7 @@ import time
 
 class WhatsappBot:
     def __init__(self):
-        self.mensagem = "Chegueio"
+        self.mensagem = "Cheguei"
         self.grupos = ["Beatriz"]
         options = webdriver.ChromeOptions()
         options.add_argument('lang=pt-br')
