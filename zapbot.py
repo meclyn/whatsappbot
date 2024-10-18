@@ -16,7 +16,7 @@ class WhatsappBot:
         r
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         self.driver.get('https://web.whatsapp.com')
-        input("Pressione Enter após fazer o login no WhatsApp Web...")  
+        input("Pressione Enter após fazer o login no WhatsApp Web....")  
 
     def EnviarMensagens(self):
         for grupo in self.grupos:
